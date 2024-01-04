@@ -1,26 +1,45 @@
 body{
-    text-align: center;
-    display:flex;
+    
+text-align: center;
+width: 100vw;
+background-image: url('./kseniia-rastvorova-YhZt03_OJKs-unsplash.jpg');
+background-position: center;
+font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+overflow: hidden;
+    
+}
+
+h1{
+    font-size: 50px;
+    color: blue;
+}
+
+.main{
+    display: flex;
     justify-content: center;
     align-items: center;
 }
 .container{
     display:flex;
     flex-wrap: wrap;
-    width: 330px;
+    width: 500px;
     justify-content: center;
+    gap: 0;
+    margin: 0;
 
+    
+
+}
+
+.container:hover{
+    cursor:pointer;
 }
 
 
 .grid{
-    background-color: black;
-    border-color: white;
-    border-style: solid;
-    width: 20px;
-    height: 20px;
-    margin:0;
-    padding: 0;
+    background-color: white;
+    width: 30px;
+    height: 30px;
     color:rgb(181, 245, 179);
     font-size: 10px;
     border: 0;
@@ -31,3 +50,19 @@ body{
     display: flex;
     flex-direction: column;
 }
+
+.color, .clear{
+    width: 70px;
+    border: none;
+    margin: 10px;
+    height: 30px;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: bold;
+
+}
+
+.color:hover, .clear:hover{
+    cursor: pointer;
+}
+

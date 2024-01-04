@@ -14,11 +14,12 @@ const colors = [
     {color: "yellow"},
     {color: "black"},
     {color: "white"},
+    {color:"random"}
 
 ]
 
 
-let colorChoice = 'white'
+let colorChoice = 'black'
 
 const options = document.querySelector('.options')
 
@@ -30,15 +31,24 @@ colors.forEach(item =>{
     if(item.color === 'black'){
         colorBtn.style.color = 'white'
     }
-
     options.appendChild(colorBtn)
 })
+
+
+
+
 
 
 let colorsOptions = document.querySelectorAll(".color")
 colorsOptions.forEach(item =>{
     item.addEventListener('click',()=>{
-        colorChoice = item.innerHTML
+        if (item.innerHTML === 'random'){
+        colorChoice = '#' + Math.floor(Math.random()*16777215).toString(16);
+    
+        }else{
+            colorChoice = item.innerHTML
+        }
+    
     })
 })
 
@@ -72,11 +82,12 @@ container.addEventListener('mousedown', () => {
 
 container.addEventListener('mouseup', () => {
     isDrawing = false;
+
 });
 
 clear.addEventListener('click',()=>{
     grids.forEach(grid => {
-            grid.style.backgroundColor = 'black';
+            grid.style.backgroundColor = 'white';
     })
 
 })
